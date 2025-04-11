@@ -1,70 +1,98 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📱 Pokédex by DaNiArI
 
-## Available Scripts
+Una Pokédex interactiva construida con **React**, con temática visual personalizable, búsqueda, favoritos, estadísticas, pantalla completa y más.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🇪🇸 Español
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ✨ Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔍 Búsqueda por nombre o ID
+- 💖 Añadir y quitar Pokémon favoritos
+- 🌈 Temas visuales dinámicos (lava, hielo, bosque, Team Rocket)
+- ⚙️ Panel de configuración y modo oscuro
+- 🎲 Exploración aleatoria de Pokémon
+- 👤 Perfil de entrenador con nombre editable y datos en tiempo real
+- 🖥️ Modo pantalla completa para una experiencia inmersiva
+- 🎯 Modal con estadísticas al estilo Pokédex
 
-### `npm test`
+### 🛠️ Tecnologías
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- CSS modular y temático
+- PokéAPI
+- LocalStorage
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🇬🇧 English
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ✨ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🔍 Search by name or ID
+- 💖 Add and remove favorite Pokémon
+- 🌈 Visual themes (lava, ice, forest, Team Rocket)
+- ⚙️ Settings panel with dark mode
+- 🎲 Random Pokémon exploration
+- 👤 Trainer profile with editable name and live data
+- 🖥️ Fullscreen mode for immersive experience
+- 🎯 Modal with classic Pokédex stats
 
-### `npm run eject`
+### 🛠️ Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React
+- Modular and themed CSS
+- PokéAPI
+- LocalStorage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🇩🇪 Deutsch
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### ✨ Funktionen
 
-## Learn More
+- 🔍 Suche nach Name oder ID
+- 💖 Pokémon zu Favoriten hinzufügen oder entfernen
+- 🌈 Visuelle Themen (Lava, Eis, Wald, Team Rocket)
+- ⚙️ Einstellungsmenü mit Dunkelmodus
+- 🎲 Zufällige Pokémon-Erkundung
+- 👤 Trainerprofil mit bearbeitbarem Namen und Live-Daten
+- 🖥️ Vollbildmodus für ein intensives Erlebnis
+- 🎯 Modal mit klassischen Pokédex-Statistiken
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🛠️ Technologien
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Modulares und thematisiertes CSS
+- PokéAPI
+- LocalStorage
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🖼️ Screenshot
 
-### Analyzing the Bundle Size
+> *(Füge hier `screenshot.png` oder `demo.gif` hinzu)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Demo](./screenshot.png)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🚀 Cómo ejecutar localmente / How to run locally / Lokale Ausführung
 
-### Advanced Configuration
+```bash
+git clone https://github.com/TU_USUARIO/TU_REPO.git
+cd TU_REPO
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🙌 Autor / Author / Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**DaNiArI**  
+> ¡Gracias por visitar este proyecto!  
+> Thanks for visiting this project!  
+> Danke für deinen Besuch!
