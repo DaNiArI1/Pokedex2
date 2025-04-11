@@ -27,6 +27,7 @@ function App() {
   const [temaVisual, setTemaVisual] = useState("tipo");
   const [perfilAbierto, setPerfilAbierto] = useState(false);
   const [logros, setLogros] = useState([]);
+  const [logroNuevo, setLogroNuevo] = useState(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -90,16 +91,35 @@ function App() {
   },[selectedPokemonId, vistos]);
 
     //Use para los logros, si no funciona me corcheo
-  useEffect(() => {
-    const nuevos = [];
-  
-    if (vistos.length >= 1) nuevos.push("primer-paso");
-    if (vistos.length >= 10) nuevos.push("novato");
-    if (vistos.length >= 100) nuevos.push("cazador-experto");
-    if (favorites.length >= 10) nuevos.push("corazon");
-  
-    setLogros(nuevos);
-  }, [vistos, favorites]);
+    useEffect(() => {
+      const nuevos = [];
+    
+      if (vistos.length >= 1) nuevos.push("primer-paso");
+      if (vistos.length >= 10) nuevos.push("novato");
+      if (vistos.length >= 100) nuevos.push("cazador-experto");
+      if (favorites.length >= 10) nuevos.push("corazon");
+    
+      // Detectar nuevos logros desbloqueados
+      const previos = JSON.parse(localStorage.getItem("logrosDesbloqueados") || "[]");
+      const desbloqueadosRecientes = nuevos.filter((logro) => !previos.includes(logro));
+    
+      if (desbloqueadosRecientes.length > 0) {
+        setLogroNuevo(desbloqueadosRecientes[0]); // Mostramos uno a la vez
+        setTimeout(() => setLogroNuevo(null), 3500);
+        localStorage.setItem("logrosDesbloqueados", JSON.stringify(nuevos));
+      }
+    
+      setLogros(nuevos);
+    }, [vistos, favorites]);
+
+    const DETALLES_LOGROS = {
+      "primer-paso": "🥇 Primer paso",
+      "novato": "🔟 Novato",
+      "cazador-experto": "🔥 Cazador experto",
+      "corazon": "💖 Corazón de entrenador",
+      "maestro-tipos": "🧠 Maestro de tipos",
+    };
+    
 
     return (
       <>
@@ -175,7 +195,11 @@ function App() {
                 logros={logros}
               />
             </div>
-          
+            {logroNuevo && (
+              <div className="toast-logro">
+                🏆 ¡Nuevo logro desbloqueado! <strong>{DETALLES_LOGROS[logroNuevo]}</strong>
+              </div>
+            )}
           </div>
         )}
       </>
