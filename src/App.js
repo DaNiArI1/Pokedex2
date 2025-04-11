@@ -26,6 +26,7 @@ function App() {
   const [pokemonType, setPokemonType] = useState("normal");
   const [temaVisual, setTemaVisual] = useState("tipo");
   const [perfilAbierto, setPerfilAbierto] = useState(false);
+  const [logros, setLogros] = useState([]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -75,6 +76,31 @@ function App() {
     setSelectedPokemonId(idAleatorio);
   };
 
+  const [vistos, setVistos] = useState(() => {
+    const almacenados = localStorage.getItem("pokemonsVistos");
+    return almacenados ? JSON.parse(almacenados) : [];
+  });
+  
+  useEffect(() => {
+    if (selectedPokemonId && !vistos.includes(selectedPokemonId)) {
+      const nuevos = [...vistos, selectedPokemonId];
+      setVistos(nuevos);
+      localStorage.setItem("pokemonsVistos", JSON.stringify(nuevos));
+    }
+  },[selectedPokemonId, vistos]);
+
+    //Use para los logros, si no funciona me corcheo
+  useEffect(() => {
+    const nuevos = [];
+  
+    if (vistos.length >= 1) nuevos.push("primer-paso");
+    if (vistos.length >= 10) nuevos.push("novato");
+    if (vistos.length >= 100) nuevos.push("cazador-experto");
+    if (favorites.length >= 10) nuevos.push("corazon");
+  
+    setLogros(nuevos);
+  }, [vistos, favorites]);
+
     return (
       <>
         {encendida ? (
@@ -112,6 +138,7 @@ function App() {
             />
     
             <div className="main-layout">
+              
               <div className="left-panel">
                 <PokemonList
                   onSelectPokemon={setSelectedPokemonId}
@@ -144,8 +171,11 @@ function App() {
                 onClose={() => setPerfilAbierto(false)}
                 favorites={favorites}
                 temaVisual={temaVisual}
+                vistos={vistos}
+                logros={logros}
               />
             </div>
+          
           </div>
         )}
       </>

@@ -1,10 +1,11 @@
 .trainer-profile {
+    color: #f0f0f0;
     position: fixed;
     top: 0;
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color: #121212;
+    background-color: #bd5a5a;
     border-right: 3px solid #333;
     color: #fff;
     box-shadow: 2px 0 10px rgba(0,0,0,0.5);
@@ -15,7 +16,6 @@
     flex-direction: column;
     gap: 16px;
   }
-  
   .trainer-profile.open {
     left: 0;
   }
@@ -34,7 +34,7 @@
   .profile-header button {
     background: none;
     border: none;
-    color: #fff;
+    color: #ccc;
     font-size: 1.2rem;
     cursor: pointer;
   }
@@ -67,8 +67,71 @@
     color: #fff;
     border: 1px solid #555;
   }
+  .progreso-entrenador {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
   
-  .trainer-profile label,
-  .trainer-profile p {
-    color: #1d1b1b;
+  .barra-progreso {
+    height: 12px;
+    background-color: #333;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .barra-progreso-interna {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.4s ease;
+  }
+  .logros-section {
+    margin-top: 20px;
+  }
+  .logros-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .logro {
+    background: #222;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .toggle-logros {
+    background: none;
+    border: 1px solid #555;
+    color: #eee;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .logros-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .logro {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #666;
+    background: #222;
+    color: #fff;
+  }
+  
+  .logro.bloqueado {
+    background: #1a1a1a;
+    color: #666;
+    border-color: #444;
   }
