@@ -73,9 +73,7 @@ Una Pokédex interactiva construida con **React**, con temática visual personal
 
 ## 🖼️ Screenshot
 
-> *(Füge hier `screenshot.png` oder `demo.gif` hinzu)*
-
-![Demo](./screenshot.png)
+Screenshots incoming when App is finished, ty
 
 ---
 
